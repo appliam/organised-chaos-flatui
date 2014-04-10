@@ -25,6 +25,8 @@
             margin: 0;
         }
  
+       
+
         div#container {
             position: absolute;
             width: 100%;
@@ -43,6 +45,14 @@
             position: absolute;
             top: 62px;
             bottom: 55px;
+            left: 0;
+            right: 0;
+        }
+
+         div[data-role="content"].spare-page {
+            position: absolute;
+            top: 62px;
+            bottom: 0px;
             left: 0;
             right: 0;
         }
