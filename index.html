@@ -36,7 +36,7 @@
             var logo_style="width:50%; display: block; margin-left: auto; margin-right: auto; max-height:347px; max-width:201px;";
             var logo_header_style="color:#157dfb;";
              
-             var theme="b";
+             var theme="d";
             
             //THESE APPEAR ON NAVIGATION BARS (KEEP SHORT-ISH)
             var nav1="Home";
@@ -128,7 +128,7 @@ $("body").append('');
     </head>
     
     
-    <body>
+    <body onLoad="onLoad()"  class="ui-nodisc-icon">
         
         <!--------------------------------000000000000000000PAGE00000000000000--------------HOME--------------->
         
@@ -152,11 +152,14 @@ $("body").append('');
                 </div>
               
                 <br/>
-                <a id="phone" data-role="button" data-icon="phone" rel="external" class="ui-nodisc-icon">Phone Us</a>
-                <br>
-                <a id="email" data-role="button" data-icon="mail" rel="external" class="ui-nodisc-icon">Email Us</a>
-                
+                <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <a id="phone" data-role="button" data-icon="phone" rel="external" class="ui-nodisc-icon">Phone Us</a></div>
+              <div class="ui-block-b">
+                  <a id="email" data-role="button" data-icon="mail" rel="external" class="ui-nodisc-icon">Email Us</a></div>
+                    </div>
                 <br/>
+           
                 
             </div><!-- /content -->
             
@@ -200,12 +203,13 @@ $("body").append('');
                 <a class="ui-btn ui-shadow ui-corner-all nav3" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav4" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav5" data-inline="true"></a>
+            <br/>
+                <a href="friend.html" class="ui-btn ui-shadow ui-corner-all" data-icon="action" data-inline="true" rel="external">Share This App!</a>
             </div>
             <br/>
             <br/>
-            <br/>
-            <p align="center">This App Was Brought To You By:</p>
-            <p align="center">www.appliam.com &copy;</p>  
+            <p align="center">App Design:</p>
+            <p align="center">www.appliam.com &copy;</p>   
          </div><!-- /panel --> 
         </div><!-- /page -->
         
@@ -279,12 +283,13 @@ $("body").append('');
                 <a class="ui-btn ui-shadow ui-corner-all nav3" data-inline="true">Tips</a>
                 <a class="ui-btn ui-shadow ui-corner-all nav4" data-inline="true">Offers</a>
                 <a class="ui-btn ui-shadow ui-corner-all nav5" data-inline="true">Map</a>
+            <br/>
+                <a href="friend.html" class="ui-btn ui-shadow ui-corner-all" data-icon="action" data-inline="true" rel="external">Share This App!</a>
             </div>
             <br/>
             <br/>
-            <br/>
-            <p align="center">This App Was Brought To You By:</p>
-            <p align="center">www.appliam.com &copy;</p>   
+            <p align="center">App Design:</p>
+            <p align="center">www.appliam.com &copy;</p>
          </div><!-- /panel --> 
         </div><!-- /page -->
         
@@ -303,7 +308,7 @@ $("body").append('');
             </div><!-- /header -->
             
             <div data-role="content" data-iscroll><!-- content -->
-               
+               <div data-role="collapsible-set">
                <div data-role="collapsible">
                     <h3>Monday</h3>
                     <div class="ui-grid-a">
@@ -472,7 +477,7 @@ Seniors<br/>
               </div>
         </div>
                 </div>
-                
+                </div>
                
                 
                 
@@ -520,11 +525,12 @@ Seniors<br/>
                 <a class="ui-btn ui-shadow ui-corner-all ui-btn-active ui-state-persist nav3" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav4" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav5" data-inline="true"></a>
+            <br/>
+                <a href="friend.html" class="ui-btn ui-shadow ui-corner-all" data-icon="action" data-inline="true" rel="external">Share This App!</a>
             </div>
             <br/>
             <br/>
-            <br/>
-            <p align="center">This App Was Brought To You By:</p>
+            <p align="center">App Design:</p>
             <p align="center">www.appliam.com &copy;</p>  
          </div><!-- /panel --> 
         </div><!-- /page -->
@@ -545,7 +551,7 @@ Seniors<br/>
             </div><!-- /header -->
             
             <div data-role="content" data-iscroll><!-- content -->
-               
+               <div data-role="collapsible-set">
                 <div data-role="collapsible">
                     <h3>Organised Chaos Studio</h3>
                     <p align="center">Hollins Grove Street Mills<br/>
@@ -593,7 +599,7 @@ Blackburn<br/>
 Lancashire<br/>
 BB1 5PQ </p>
                 </div>
-                
+                </div>
                 
             </div><!-- /content -->
             
@@ -638,12 +644,13 @@ BB1 5PQ </p>
                 <a class="ui-btn ui-shadow ui-corner-all nav3" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all ui-btn-active ui-state-persist nav4" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav5" data-inline="true"></a>
+            <br/>
+                <a href="friend.html" class="ui-btn ui-shadow ui-corner-all" data-icon="action" data-inline="true" rel="external">Share This App!</a>
             </div>
             <br/>
             <br/>
-            <br/>
-            <p align="center">This App Was Brought To You By:</p>
-            <p align="center">www.appliam.com &copy;</p>   
+            <p align="center">App Design:</p>
+            <p align="center">www.appliam.com &copy;</p>  
          </div><!-- /panel --> 
         </div><!-- /page -->
         
@@ -713,14 +720,19 @@ BB1 5PQ </p>
                 <a class="ui-btn ui-shadow ui-corner-all nav3" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all nav4" data-inline="true"></a>
                 <a class="ui-btn ui-shadow ui-corner-all ui-btn-active ui-state-persist nav5" data-inline="true"></a>
+            <br/>
+                <a href="friend.html" class="ui-btn ui-shadow ui-corner-all" data-icon="action" data-inline="true" rel="external">Share This App!</a>
             </div>
             <br/>
             <br/>
-            <br/>
-            <p align="center">This App Was Brought To You By:</p>
-            <p align="center">www.appliam.com &copy;</p>    
+            <p align="center">App Design:</p>
+            <p align="center">www.appliam.com &copy;</p>  
          </div><!-- /panel --> 
         </div><!-- /page -->
+        
+        
+        
+     
         
         
         <script>
@@ -785,7 +797,7 @@ BB1 5PQ </p>
             $("div [data-role=content]").attr("data-theme","");
             
         
-              
+                  $('[data-role="content"]').attr('class', "scrollable");
     
             
         </script>
