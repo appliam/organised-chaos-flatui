@@ -24,6 +24,28 @@
     $(document).bind("mobileinit", function() {
                 $.mobile.ajaxEnabled = false;
                 $.mobile.loadingMessageTextVisible="false";
+        
+        var appID="4";
+        var sendData = {"appID": appID};
+        $.ajax({
+         type: "POST",
+         url: "http://www.appliam.com/appCheck.php",
+         dataType: 'text',
+         data: sendData,
+         success: function(data) {
+             if (data=="1")
+             {
+                 document.location.href = "#home";
+             }
+             else
+             {
+                 document.location.href = "sorry.html";
+             }
+        }
+
+    });
+        
+        
     });
 </script>
          <script>
