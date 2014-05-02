@@ -72,24 +72,52 @@
             var nav2_content="We are Michelle and Rex Gath, and we have been training in Martial arts for a combined total of 54 years. I am a 4th Degree Master in Sokudo and Self Defense, and Rex is a Second degree Blackbelt in Sokudo and Kickboxing. We both hold Nationally Recognized Coaching Qualifications, along with Enhanced Disclosure CRB Certificates, Child Protection Certificates and valid First Aid Certificates. <br/>Our initial aim is to give as many children as possible the opportunity to see first hand, that martial arts can be fun and interesting without being overbearing or a chore. At Organised Chaos we believe that martial arts is a long term commitment, therefore when joining a club the experience should first and foremost be warm, friendly and supportive, but with clear boundaries that are easy and fun to follow. We have a very good retention rate compared with other groups, and believe that this is testament to the quality of the coaching and the delivery of our classes.";
              
              var appID="4";
-        var sendData = {"appID": appID};
-        $.ajax({
-         type: "POST",
-         url: "http://www.appliam.com/appCheck.php",
-         dataType: 'text',
-         data: sendData,
-         success: function(data) {
-             if (data=="1")
+             
+             var networkState = navigator.connection.type;
+             if (networkState == Connection.NONE)
              {
-                 document.location.href = "#home";
+                 if(localStorage.getItem("active") === null)
+                 {
+                     document.location.href = "nointernet.html";
+                 }
+                 else
+                 {
+                     if(localStorage.getItem("active")===1)
+                     {
+                         document.location.href = "#home";
+                     }
+                     
+                     if(localStorage.getItem("active")===0)
+                     {
+                         document.location.href = "sorry.html";
+                     }
+                 }
              }
-             if (data=="0")
+             else
              {
-                 document.location.href = "sorry.html";
+                    var sendData = {"appID": appID};
+                    $.ajax({
+                     type: "POST",
+                     url: "http://www.appliam.com/appCheck.php",
+                     dataType: 'text',
+                     data: sendData,
+                     success: function(data) {
+                         if (data=="1")
+                         {
+                             localStorage.setItem("active",1);
+                             document.location.href = "#home";
+                         }
+                         if (data=="0")
+                         {
+                             localStorage.setItem("active",0);
+                             document.location.href = "sorry.html";
+                         }
+                    }
+                        
+                });
+                 
+                 
              }
-        }
-
-    });
             
              
                             
