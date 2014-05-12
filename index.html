@@ -73,34 +73,14 @@
              
              var appID="4";
              
-             var networkState = navigator.connection.type;
-             if (networkState == Connection.NONE)
-             {
-                 if(localStorage.getItem("active") === null)
-                 {
-                     document.location.href = "nointernet.html";
-                 }
-                 else
-                 {
-                     if(localStorage.getItem("active")===1)
-                     {
-                         document.location.href = "#home";
-                     }
-                     
-                     if(localStorage.getItem("active")===0)
-                     {
-                         document.location.href = "sorry.html";
-                     }
-                 }
-             }
-             else
-             {
+             
                     var sendData = {"appID": appID};
                     $.ajax({
                      type: "POST",
                      url: "http://www.appliam.com/appCheck.php",
                      dataType: 'text',
                      data: sendData,
+                     timeout:5000,
                      success: function(data) {
                          if (data=="1")
                          {
@@ -112,12 +92,20 @@
                              localStorage.setItem("active",0);
                              document.location.href = "sorry.html";
                          }
-                    }
+                    },
+                        error: function(){
+                         if(localStorage.getItem("active")==1)
+                         {
+                             document.location.href = "#home";
+                         }else{
+                             document.location.href = "nointernet.html";
+                         }
+                        }
                         
                 });
                  
                  
-             }
+             
             
              
                             
